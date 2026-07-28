@@ -1,37 +1,242 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Hello World</title>
+  <meta charset="utf-8">
+  <title>Jagmohan Sharma — Indian Forest Service</title>
+  <meta name="description" content="Writing on forests, climate and conservation by Dr Jagmohan Sharma, Indian Forest Service, 1990.">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta property="og:title" content="Jagmohan Sharma — Indian Forest Service">
+  <meta property="og:description" content="Writing on forests, climate and conservation.">
+  <meta property="og:type" content="profile">
+  <meta property="og:image" content="/assets/portrait.jpg">
+  <link rel="stylesheet" href="https://facet.tanishksharma.com/lib/facet.css">
+  <script src="https://facet.tanishksharma.com/lib/facet.js" defer></script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Jagmohan Sharma",
+    "jobTitle": "Indian Forest Service (1990)",
+    "image": "/assets/portrait.jpg",
+    "alumniOf": ["Indian Institute of Science", "University of Edinburgh"]
+  }
+  </script>
   <style>
-    :root { color-scheme: light dark; }
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      min-height: 100vh;
-      display: grid;
-      place-items: center;
-      font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-      background: #0b0d10;
-      color: #f4f6f8;
+    /* Forest accent. Facet's ranks stay intact, only the hues move. */
+    :root {
+      --accent-1: #1B5E20; --accent-1-hover: #164C1B;
+      --accent-1-pressed: #113D15; --on-accent-1: #FFFFFF;
+      --accent-3: #1B5E20; --accent-3-hover: #164C1B;
+      --accent-3-pressed: #113D15; --on-accent-3: #FFFFFF;
     }
-    main { text-align: center; padding: 2rem; }
-    h1 {
-      font-size: clamp(2.5rem, 8vw, 5rem);
-      font-weight: 700;
-      letter-spacing: -0.03em;
-      background: linear-gradient(135deg, #6ea8fe, #b98cff);
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent;
+    [data-mode="dark"] {
+      --accent-1: #7DBE86; --accent-1-hover: #8FCB97;
+      --accent-1-pressed: #6BAF75; --on-accent-1: #0B2410;
+      --accent-3: #7DBE86; --accent-3-hover: #8FCB97;
+      --accent-3-pressed: #6BAF75; --on-accent-3: #0B2410;
     }
-    p { margin-top: 1rem; font-size: 1.125rem; opacity: 0.7; }
+
+    /* Landing */
+    .lede { display: grid; grid-template-columns: 8.5rem 1fr; gap: var(--space-card); align-items: center; }
+    .lede-portrait { width: 8.5rem; height: 8.5rem; border-radius: var(--radius-pill); object-fit: cover;
+      border: var(--border-hairline) solid var(--border); }
+    .lede-name { font-size: var(--text-h1); font-family: var(--font-heading);
+      line-height: var(--leading-heading); letter-spacing: var(--tracking-heading); margin: 0; }
+    .lede-credential { color: var(--text-muted); max-width: var(--measure-narrow); margin: 0; }
+    @media (max-width: 34rem) {
+      .lede { grid-template-columns: 1fr; gap: var(--space-stack); }
+      .lede-portrait { width: 6rem; height: 6rem; }
+    }
+
+    /* Writing list */
+    .pieces { list-style: none; margin: 0; padding: 0; }
+    .piece { border-top: var(--border-hairline) solid var(--border-subtle); }
+    .piece:last-child { border-bottom: var(--border-hairline) solid var(--border-subtle); }
+    .piece a { display: grid; grid-template-columns: 1fr auto; gap: var(--space-inline);
+      align-items: baseline; padding-block: var(--space-inline); text-decoration: none; color: inherit; }
+    .piece a:hover .piece-title { color: var(--accent-1); }
+    .piece-title { font-family: var(--font-heading); font-size: var(--text-h4);
+      line-height: var(--leading-snug); }
+    .piece-meta { font-family: var(--font-mono); font-size: var(--text-caption);
+      color: var(--text-subtle); white-space: nowrap; }
+    @media (max-width: 34rem) {
+      .piece a { grid-template-columns: 1fr; gap: var(--space-tight); }
+    }
+
+    .section-note { color: var(--text-subtle); font-size: var(--text-footnote); }
   </style>
 </head>
 <body>
-  <main>
-    <h1>Hello, World</h1>
-    <p>This page is live.</p>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <div class="top-menu-sticky container">
+    <header class="top-menu">
+      <a class="brand-lockup" href="/"><span class="wordmark-slot">Jagmohan Sharma</span></a>
+      <nav class="top-menu-links" aria-label="Site">
+        <a class="nav-link" href="#writing">Writing</a>
+        <a class="nav-link" href="#career">Career</a>
+        <a class="nav-link" href="#contact">Contact</a>
+      </nav>
+      <details class="top-menu-fold">
+        <summary class="fold-trigger" aria-label="Menu">
+          <svg width="20" height="20" data-icon="menu" class="when-closed" aria-hidden="true"></svg>
+          <svg width="20" height="20" data-icon="close" class="when-open" aria-hidden="true"></svg>
+        </summary>
+        <nav class="top-menu-links" aria-label="Site">
+          <a class="nav-link" href="#writing">Writing</a>
+          <a class="nav-link" href="#career">Career</a>
+          <a class="nav-link" href="#contact">Contact</a>
+        </nav>
+      </details>
+    </header>
+  </div>
+
+  <main id="main" class="container stack-loose">
+
+    <section class="lede" aria-label="Introduction">
+      <img class="lede-portrait" src="/assets/portrait.jpg" alt="Jagmohan Sharma" width="800" height="800">
+      <div class="stack-tight">
+        <h1 class="lede-name">Jagmohan Sharma</h1>
+        <p class="lede-credential">Indian Forest Service, 1990. Former Director of the Indira Gandhi
+          National Forest Academy. Writes on forests, climate and conservation.</p>
+      </div>
+    </section>
+
+    <section id="writing" class="stack">
+      <h2 class="heading-bar">Writing</h2>
+      <ul class="pieces">
+        <li class="piece"><a href="https://www.deccanherald.com/opinion/why-the-western-ghats-need-climate-resilience-not-repair-4082256">
+          <span class="piece-title">Why the Western Ghats need climate resilience, not repair</span>
+          <span class="piece-meta">Deccan Herald · Jul 2026</span></a></li>
+        <li class="piece"><a href="https://www.deccanherald.com/opinion/regulate-forest-trails-dont-shut-them-down-4003363">
+          <span class="piece-title">Regulate forest trails, don't shut them down</span>
+          <span class="piece-meta">Deccan Herald · May 2026</span></a></li>
+        <li class="piece"><a href="https://www.deccanherald.com/opinion/reframing-indias-wildlife-conflicts-3911916">
+          <span class="piece-title">Reframing India's wildlife conflicts</span>
+          <span class="piece-meta">Deccan Herald · Feb 2026</span></a></li>
+        <li class="piece"><a href="https://www.deccanherald.com/opinion/india-must-take-water-action-to-ensure-economic-growth-1205162.html">
+          <span class="piece-title">India must take water action to ensure economic growth</span>
+          <span class="piece-meta">Deccan Herald · Mar 2023</span></a></li>
+        <li class="piece"><a href="https://www.deccanherald.com/opinion/india-at-the-bottom-thats-not-fair-1119922.html">
+          <span class="piece-title">India at the bottom? That's not fair</span>
+          <span class="piece-meta">Deccan Herald · Jun 2022</span></a></li>
+        <li class="piece"><a href="https://www.deccanherald.com/opinion/markets-can-help-deliver-on-the-pledges-made-at-glasgow-1049057.html">
+          <span class="piece-title">Markets can help deliver on the pledges made at Glasgow</span>
+          <span class="piece-meta">Deccan Herald · Nov 2021</span></a></li>
+        <li class="piece"><a href="https://www.deccanherald.com/opinion/deforestation-drives-epidemics-833195.html">
+          <span class="piece-title">Deforestation drives epidemics</span>
+          <span class="piece-meta">Deccan Herald · May 2020</span></a></li>
+        <li class="piece"><a href="https://www.deccanherald.com/opinion/global-agreements-crucial-816760.html">
+          <span class="piece-title">Global agreements crucial</span>
+          <span class="piece-meta">Deccan Herald · Mar 2020</span></a></li>
+        <li class="piece"><a href="https://www.deccanherald.com/opinion/climate-smart-forestry-robust-option-666114.html">
+          <span class="piece-title">Climate-smart forestry a robust option</span>
+          <span class="piece-meta">Deccan Herald · Apr 2018</span></a></li>
+      </ul>
+      <p class="section-note">Columns open at the publisher.</p>
+    </section>
+
+    <section id="career" class="stack">
+      <h2 class="heading-bar">Career</h2>
+      <div class="stack">
+        <article class="entry">
+          <div class="entry-head">
+            <strong>Director</strong>
+            <span class="entry-date">2023 — 2025</span>
+          </div>
+          <p class="entry-org">Indira Gandhi National Forest Academy, Dehradun</p>
+          <p>Led the national training academy for the Indian Forest Service.</p>
+        </article>
+        <article class="entry">
+          <div class="entry-head">
+            <strong>Director General</strong>
+            <span class="entry-date">2021 — 2023</span>
+          </div>
+          <p class="entry-org">Environmental Management &amp; Policy Research Institute, Bengaluru</p>
+          <p>Karnataka's state nodal agency for climate change.</p>
+        </article>
+        <article class="entry">
+          <div class="entry-head">
+            <strong>Additional Principal Chief Conservator of Forests</strong>
+            <span class="entry-date">Karnataka</span>
+          </div>
+          <p class="entry-org">Forest conservation, and state nodal officer for the Forest Conservation Act</p>
+        </article>
+        <article class="entry">
+          <div class="entry-head">
+            <strong>Joint Director, Wildlife and Delhi Zoo</strong>
+            <span class="entry-date">Government of India</span>
+          </div>
+          <p class="entry-org">Also Assistant Inspector General of Forests, externally aided projects</p>
+        </article>
+        <article class="entry">
+          <div class="entry-head">
+            <strong>Field postings</strong>
+            <span class="entry-date">Karnataka</span>
+          </div>
+          <p class="entry-org">Nagarhole National Park · Bhadravathi · Kodagu · Mandya</p>
+        </article>
+        <article class="entry">
+          <div class="entry-head">
+            <strong>Education</strong>
+          </div>
+          <p class="entry-org">PhD, climate change and forest vulnerability, Indian Institute of Science ·
+            MSc, forest ecology and management, University of Edinburgh</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact" class="stack">
+      <h2 class="heading-bar">Contact</h2>
+      <form class="stack" id="contact-form">
+        <label class="field">
+          <span class="field-label">Name</span>
+          <input type="text" name="name" required autocomplete="name">
+        </label>
+        <label class="field">
+          <span class="field-label">Email</span>
+          <input type="email" name="email" required autocomplete="email">
+        </label>
+        <label class="field">
+          <span class="field-label">Message</span>
+          <textarea name="message" rows="5" required></textarea>
+        </label>
+        <div class="row">
+          <button class="btn btn-primary" type="submit" data-event="contact-send">Send</button>
+        </div>
+        <p class="field-msg" id="contact-msg" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+
   </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <span class="footer-wordmark">Jagmohan Sharma</span>
+          <p class="footer-tagline">Forests, climate and conservation.</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>Indian Forest Service, 1990</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // No backend yet: the form hands off to the reader's mail client.
+    const CONTACT_EMAIL = 'PLACEHOLDER@example.com';
+    document.getElementById('contact-form').addEventListener('submit', (e) => {
+      e.preventDefault();
+      const f = e.currentTarget;
+      const name = f.elements.name.value.trim();
+      const body = `${f.elements.message.value.trim()}\n\n${name}\n${f.elements.email.value.trim()}`;
+      window.location.href = `mailto:${CONTACT_EMAIL}`
+        + `?subject=${encodeURIComponent('Website enquiry from ' + name)}`
+        + `&body=${encodeURIComponent(body)}`;
+      document.getElementById('contact-msg').textContent = 'Opening your mail app.';
+    });
+  </script>
 </body>
 </html>
