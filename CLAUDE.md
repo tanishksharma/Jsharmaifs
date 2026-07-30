@@ -11,13 +11,16 @@ of the site; career and contact support it.
 | **Live (production)** | https://www.jsharmaifs.in |
 | Apex, 308s to www | https://jsharmaifs.in |
 | Vercel production alias | https://jsharmaifs.vercel.app |
-| Staging | **None.** No `staging` branch exists. Only `main`. |
+| Staging | https://staging-jsharmaifs.vercel.app (the `staging` branch) |
 
 - Give out `https://www.jsharmaifs.in`. The apex redirects to it, so www is canonical.
-- Deploys are GitHub-connected: a push to `main` builds production automatically.
-- If a `staging` branch is ever created its alias will be
-  `jsharmaifs-git-staging-tanishksharmas-projects.vercel.app`. Branch aliases on this project
-  sit behind Vercel SSO, so that link needs deployment protection relaxed before it is shareable.
+- Deploys are GitHub-connected: a push to `main` builds production automatically; a push to
+  `staging` builds the staging deployment.
+- `staging-jsharmaifs.vercel.app` is a vercel.app domain pinned to the `staging` branch — the
+  shareable staging URL. Note it only serves publicly while the project's Vercel Authentication
+  (deployment protection) is off; manually-added vercel.app domains do NOT get the
+  custom-domain exemption, so turning protection back on puts staging behind a Vercel login.
+  The raw branch alias is `jsharmaifs-git-staging-tanishksharmas-projects.vercel.app`.
 
 ## Vercel
 
@@ -28,9 +31,11 @@ of the site; career and contact support it.
 ## Stack
 
 - Plain HTML and CSS. No build step, no dependencies, no framework.
-- Facet is consumed by URL from `https://facet.tanishksharma.com/lib/facet.css` and `facet.js`.
-  Source repo is `tanishksharma/facet`. Build new patterns here first, promote them there once
-  they repeat.
+- **Facet is the design system** — the library at https://facet.tanishksharma.com, consumed
+  by URL from `https://facet.tanishksharma.com/lib/facet.css` and `facet.js`. Source repo is
+  `tanishksharma/facet`; the full component reference is at
+  `https://facet.tanishksharma.com/llms.txt` — read that before inventing markup or CSS.
+  Build new patterns here first, promote them there once they repeat.
 - `styles.css` is the only project CSS: the forest-green accent override plus the three custom
   pieces Facet does not carry (`.lede`, `.pieces`, `.section-note`). Tokens only.
 - `vercel.json` sets `cleanUrls`, so `career.html` serves at `/career`.
