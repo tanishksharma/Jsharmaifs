@@ -9,7 +9,9 @@
   <meta property="og:description" content="Writing on forests, climate and conservation.">
   <meta property="og:type" content="profile">
   <meta property="og:image" content="/assets/portrait.jpg">
+  <link rel="canonical" href="https://www.jsharmaifs.in/">
   <link rel="stylesheet" href="https://facet.tanishksharma.com/lib/facet.css">
+  <link rel="stylesheet" href="/styles.css">
   <script src="https://facet.tanishksharma.com/lib/facet.js" defer></script>
   <script type="application/ld+json">
   {
@@ -17,81 +19,25 @@
     "@type": "Person",
     "name": "Jagmohan Sharma",
     "jobTitle": "Indian Forest Service (1990)",
-    "image": "/assets/portrait.jpg",
+    "url": "https://www.jsharmaifs.in/",
+    "image": "https://www.jsharmaifs.in/assets/portrait.jpg",
     "alumniOf": ["Indian Institute of Science", "University of Edinburgh"]
   }
   </script>
-  <style>
-    /* Forest accent. Facet's ranks stay intact, only the hues move. */
-    :root {
-      --accent-1: #1B5E20; --accent-1-hover: #164C1B;
-      --accent-1-pressed: #113D15; --on-accent-1: #FFFFFF;
-      --accent-3: #1B5E20; --accent-3-hover: #164C1B;
-      --accent-3-pressed: #113D15; --on-accent-3: #FFFFFF;
-    }
-    [data-mode="dark"] {
-      --accent-1: #7DBE86; --accent-1-hover: #8FCB97;
-      --accent-1-pressed: #6BAF75; --on-accent-1: #0B2410;
-      --accent-3: #7DBE86; --accent-3-hover: #8FCB97;
-      --accent-3-pressed: #6BAF75; --on-accent-3: #0B2410;
-    }
-
-    /* Landing */
-    .lede { display: grid; grid-template-columns: 8.5rem 1fr; gap: var(--space-card); align-items: center; }
-    .lede-portrait { width: 8.5rem; height: 8.5rem; border-radius: var(--radius-pill); object-fit: cover;
-      border: var(--border-hairline) solid var(--border); }
-    .lede-name { font-size: var(--text-h1); font-family: var(--font-heading);
-      line-height: var(--leading-heading); letter-spacing: var(--tracking-heading); margin: 0; }
-    .lede-credential { color: var(--text-muted); max-width: var(--measure-narrow); margin: 0; }
-    @media (max-width: 34rem) {
-      .lede { grid-template-columns: 1fr; gap: var(--space-stack); }
-      .lede-portrait { width: 6rem; height: 6rem; }
-    }
-
-    /* Writing list */
-    .pieces { list-style: none; margin: 0; padding: 0; }
-    .piece { border-top: var(--border-hairline) solid var(--border-subtle); }
-    .piece:last-child { border-bottom: var(--border-hairline) solid var(--border-subtle); }
-    .piece a { display: grid; grid-template-columns: 1fr auto; gap: var(--space-inline);
-      align-items: baseline; padding-block: var(--space-inline); text-decoration: none; color: inherit; }
-    .piece a:hover .piece-title { color: var(--accent-1); }
-    .piece-title { font-family: var(--font-heading); font-size: var(--text-h4);
-      line-height: var(--leading-snug); }
-    .piece-meta { font-family: var(--font-mono); font-size: var(--text-caption);
-      color: var(--text-subtle); white-space: nowrap; }
-    @media (max-width: 34rem) {
-      .piece a { grid-template-columns: 1fr; gap: var(--space-tight); }
-    }
-
-    .section-note { color: var(--text-subtle); font-size: var(--text-footnote); }
-  </style>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
 
-  <div class="top-menu-sticky container">
-    <header class="top-menu">
-      <a class="brand-lockup" href="/"><span class="wordmark-slot">Jagmohan Sharma</span></a>
-      <nav class="top-menu-links" aria-label="Site">
-        <a class="nav-link" href="#writing">Writing</a>
-        <a class="nav-link" href="#career">Career</a>
-        <a class="nav-link" href="#contact">Contact</a>
-      </nav>
-      <details class="top-menu-fold">
-        <summary class="fold-trigger" aria-label="Menu">
-          <svg width="20" height="20" data-icon="menu" class="when-closed" aria-hidden="true"></svg>
-          <svg width="20" height="20" data-icon="close" class="when-open" aria-hidden="true"></svg>
-        </summary>
-        <nav class="top-menu-links" aria-label="Site">
-          <a class="nav-link" href="#writing">Writing</a>
-          <a class="nav-link" href="#career">Career</a>
-          <a class="nav-link" href="#contact">Contact</a>
-        </nav>
-      </details>
-    </header>
-  </div>
+  <nav class="tab-bar tab-bar-top" aria-label="Sections">
+    <div class="tab-set">
+      <a class="tab-brand" href="/" aria-current="false">Jagmohan Sharma</a>
+      <a class="tab-seg" href="/" aria-current="page">Writing</a>
+      <a class="tab-seg" href="/career" aria-current="false">Career</a>
+      <a class="tab-seg" href="/contact" aria-current="false">Contact</a>
+    </div>
+  </nav>
 
-  <main id="main" class="container stack-loose">
+  <main id="main" class="container stack-loose page-under-bar">
 
     <section class="lede" aria-label="Introduction">
       <img class="lede-portrait" src="/assets/portrait.jpg" alt="Jagmohan Sharma" width="800" height="800">
@@ -102,7 +48,7 @@
       </div>
     </section>
 
-    <section id="writing" class="stack">
+    <section class="stack">
       <h2 class="heading-bar">Writing</h2>
       <ul class="pieces">
         <li class="piece"><a href="https://www.deccanherald.com/opinion/why-the-western-ghats-need-climate-resilience-not-repair-4082256">
@@ -136,78 +82,6 @@
       <p class="section-note">Columns open at the publisher.</p>
     </section>
 
-    <section id="career" class="stack">
-      <h2 class="heading-bar">Career</h2>
-      <div class="stack">
-        <article class="entry">
-          <div class="entry-head">
-            <strong>Director</strong>
-            <span class="entry-date">2023 — 2025</span>
-          </div>
-          <p class="entry-org">Indira Gandhi National Forest Academy, Dehradun</p>
-          <p>Led the national training academy for the Indian Forest Service.</p>
-        </article>
-        <article class="entry">
-          <div class="entry-head">
-            <strong>Director General</strong>
-            <span class="entry-date">2021 — 2023</span>
-          </div>
-          <p class="entry-org">Environmental Management &amp; Policy Research Institute, Bengaluru</p>
-          <p>Karnataka's state nodal agency for climate change.</p>
-        </article>
-        <article class="entry">
-          <div class="entry-head">
-            <strong>Additional Principal Chief Conservator of Forests</strong>
-            <span class="entry-date">Karnataka</span>
-          </div>
-          <p class="entry-org">Forest conservation, and state nodal officer for the Forest Conservation Act</p>
-        </article>
-        <article class="entry">
-          <div class="entry-head">
-            <strong>Joint Director, Wildlife and Delhi Zoo</strong>
-            <span class="entry-date">Government of India</span>
-          </div>
-          <p class="entry-org">Also Assistant Inspector General of Forests, externally aided projects</p>
-        </article>
-        <article class="entry">
-          <div class="entry-head">
-            <strong>Field postings</strong>
-            <span class="entry-date">Karnataka</span>
-          </div>
-          <p class="entry-org">Nagarhole National Park · Bhadravathi · Kodagu · Mandya</p>
-        </article>
-        <article class="entry">
-          <div class="entry-head">
-            <strong>Education</strong>
-          </div>
-          <p class="entry-org">PhD, climate change and forest vulnerability, Indian Institute of Science ·
-            MSc, forest ecology and management, University of Edinburgh</p>
-        </article>
-      </div>
-    </section>
-
-    <section id="contact" class="stack">
-      <h2 class="heading-bar">Contact</h2>
-      <form class="stack" id="contact-form">
-        <label class="field">
-          <span class="field-label">Name</span>
-          <input type="text" name="name" required autocomplete="name">
-        </label>
-        <label class="field">
-          <span class="field-label">Email</span>
-          <input type="email" name="email" required autocomplete="email">
-        </label>
-        <label class="field">
-          <span class="field-label">Message</span>
-          <textarea name="message" rows="5" required></textarea>
-        </label>
-        <div class="row">
-          <button class="btn btn-primary" type="submit" data-event="contact-send">Send</button>
-        </div>
-        <p class="field-msg" id="contact-msg" role="status" aria-live="polite"></p>
-      </form>
-    </section>
-
   </main>
 
   <footer class="footer">
@@ -223,20 +97,5 @@
       </div>
     </div>
   </footer>
-
-  <script>
-    // No backend yet: the form hands off to the reader's mail client.
-    const CONTACT_EMAIL = 'PLACEHOLDER@example.com';
-    document.getElementById('contact-form').addEventListener('submit', (e) => {
-      e.preventDefault();
-      const f = e.currentTarget;
-      const name = f.elements.name.value.trim();
-      const body = `${f.elements.message.value.trim()}\n\n${name}\n${f.elements.email.value.trim()}`;
-      window.location.href = `mailto:${CONTACT_EMAIL}`
-        + `?subject=${encodeURIComponent('Website enquiry from ' + name)}`
-        + `&body=${encodeURIComponent(body)}`;
-      document.getElementById('contact-msg').textContent = 'Opening your mail app.';
-    });
-  </script>
 </body>
 </html>
