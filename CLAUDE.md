@@ -11,13 +11,15 @@ of the site; career and contact support it.
 | **Live (production)** | https://www.jsharmaifs.in |
 | Apex, 308s to www | https://jsharmaifs.in |
 | Vercel production alias | https://jsharmaifs.vercel.app |
-| Staging | **None.** No `staging` branch exists. Only `main`. |
+| Staging | https://staging-jsharmaifs.vercel.app (the `staging` branch) |
 
 - Give out `https://www.jsharmaifs.in`. The apex redirects to it, so www is canonical.
-- Deploys are GitHub-connected: a push to `main` builds production automatically.
-- If a `staging` branch is ever created its alias will be
-  `jsharmaifs-git-staging-tanishksharmas-projects.vercel.app`. Branch aliases on this project
-  sit behind Vercel SSO, so that link needs deployment protection relaxed before it is shareable.
+- Deploys are GitHub-connected: a push to `main` builds production automatically; a push to
+  `staging` builds the staging deployment.
+- The staging branch's raw alias, `jsharmaifs-git-staging-tanishksharmas-projects.vercel.app`,
+  sits behind Vercel SSO (deployment protection covers everything except custom domains).
+  `staging-jsharmaifs.vercel.app` is added as a custom domain pinned to the `staging` branch,
+  which makes it the shareable staging URL.
 
 ## Vercel
 
