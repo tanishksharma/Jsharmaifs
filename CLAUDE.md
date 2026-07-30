@@ -31,9 +31,11 @@ of the site; career and contact support it.
 ## Stack
 
 - Plain HTML and CSS. No build step, no dependencies, no framework.
-- Facet is consumed by URL from `https://facet.tanishksharma.com/lib/facet.css` and `facet.js`.
-  Source repo is `tanishksharma/facet`. Build new patterns here first, promote them there once
-  they repeat.
+- **Facet is the design system** — the library at https://facet.tanishksharma.com, consumed
+  by URL from `https://facet.tanishksharma.com/lib/facet.css` and `facet.js`. Source repo is
+  `tanishksharma/facet`; the full component reference is at
+  `https://facet.tanishksharma.com/llms.txt` — read that before inventing markup or CSS.
+  Build new patterns here first, promote them there once they repeat.
 - `styles.css` is the only project CSS: the forest-green accent override plus the three custom
   pieces Facet does not carry (`.lede`, `.pieces`, `.section-note`). Tokens only.
 - `vercel.json` sets `cleanUrls`, so `career.html` serves at `/career`.
